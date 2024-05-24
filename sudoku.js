@@ -1,3 +1,4 @@
+
 const fs = require("fs");
 function read(num) {
   const fs = require("fs");
@@ -17,6 +18,7 @@ function read(num) {
   );
   return number;
 }
+
 
 function solve() {
   const sudoku = read(1);
