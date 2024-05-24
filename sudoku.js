@@ -1,4 +1,25 @@
 
+const {EOL} = require("os")
+
+
+const fs = require('fs');
+const { log } = require("console");
+function read() {
+  const readFileSync = fs.readFileSync("./puzzles.txt", "utf-8").split(EOL).map((el) => el.split(""));
+  // return readFileSync;
+  
+
+  let sudokuString = []; 
+   for (let i = 0; i < 1; i++) {
+  sudokuString.push(readFileSync[i])
+  
+ return sudokuString;
+ } 
+
+
+ 
+=======
+
 const fs = require("fs");
 function read(num) {
   const fs = require("fs");
@@ -17,6 +38,7 @@ function read(num) {
     })
   );
   return number;
+
 }
 
 
@@ -52,3 +74,4 @@ function prettyBoard() {
    * Подумай, как симпатичнее его вывести.
    */
 }
+console.log('hi');
