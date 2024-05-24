@@ -17,15 +17,25 @@ function read(num) {
   );
   return number;
 }
-console.table(read(1));
 
 function solve() {
-  /**
-   * Принимает игровое поле в том формате, в котором его вернули из функции read.
-   * Возвращает игровое поле после попытки его решить.
-   */
+  const sudoku = read(1);
+  for (let i = 0; i < sudoku.length; i += 1) {
+    for (let j = 0; j < sudoku.length; j++) {
+      if (sudoku[i][j] === "-") {
+        sudoku[i][j] = Math.floor(Math.random() * 8) + 1;
+      }
+      sudoku[i][j] = +sudoku[i][j];
+      /**
+       * Принимает игровое поле в том формате, в котором его вернули из функции read.
+       * Возвращает игровое поле после попытки его решить.
+       */
+    }
+  }
+  return sudoku;
 }
 
+console.table(solve());
 function isSolved() {
   /**
    * Принимает игровое поле в том формате, в котором его вернули из функции solve.
